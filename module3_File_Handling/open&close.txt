@@ -1,0 +1,126 @@
+Python provides inbuilt functions for creating, writing, and reading files. There are two types of files that can be handled in Python, normal text files and binary files (written in binary language, 0s, and 1s).
+
+
+Text files: In this type of file, Each line of text is terminated with a special character called EOL (End of Line), which is the new line character (‘\n’) in Python by default.
+
+Binary files: In this type of file, there is no terminator for a line, and the data is stored after converting it into machine-understandable binary language.
+
+
+Opening a file
+Opening a file refers to getting the file ready either for reading or for writing. This can be done using the open() function. This function returns a file object and takes two arguments, one that accepts the file name and another that accepts the mode(Access Mode). Now, the question arises what is the access mode? Access modes govern the type of operations possible in the opened file. It refers to how the file will be used once it’s opened. These modes also define the location of the File Handle in the file. File handle is like a cursor, which defines from where the data has to be read or written in the file.
+There are 6 access modes in python.
+
+Read Only (‘r’): Open text file for reading. The handle is positioned at the beginning of the file. If the file does not exist, raises an I/O error. This is also the default mode in which the file is opened.
+
+Read and Write (‘r+’): Open the file for reading and writing. The handle is positioned at the beginning of the file. Raises I/O error if the file does not exist.
+
+Write Only (‘w’): Open the file for writing. For the existing files, the data is truncated and over-written. The handle is positioned at the beginning of the file. Creates the file if the file does not exist.
+
+Write and Read (‘w+’): Open the file for reading and writing. For existing files, data is truncated and over-written. The handle is positioned at the beginning of the file.
+
+Append Only (‘a’): Open the file for writing. The file is created if it does not exist. The handle is positioned at the end of the file. The data being written will be inserted at the end, after the existing data.
+
+Append and Read (‘a+’): Open the file for reading and writing. The file is created if it does not exist. The handle is positioned at the end of the file. The data being written will be inserted at the end, after the existing data.
+
+Read Only in Binary format(‘rb’): It lets the user open the file for reading in binary format.
+
+Read and Write in Binary Format(‘rb+’): It lets the user open the file for reading and writing in binary format.
+
+Write Only in Binary Format(‘wb’): It lets the user open the file for writing in binary format. When a file gets opened in this mode, there are two things that can happen mostly. A new file gets created if the file does not exist. The content within the file will get overwritten if the file exists and has some data stored in it.
+
+Write and Read in Binary Format(‘wb+’): It lets the user open the file for reading as well as writing in binary format. When a file gets opened in this mode, there are two things that can mostly happen. A new file gets created for writing and reading if the file does not exist. The content within the file will get overwritten if the file exists and has some data stored in it.
+
+Append only in Binary Format(‘ab’): It lets the user open the file for appending in binary format. A new file gets created if there is no file. The data will be inserted at the end if the file exists and has some data stored in it.
+
+Append and Read in Binary Format(‘ab+’): It lets the user open the file for appending and reading in binary format. A new file will be created for reading and appending if the file does not exist.
+
+We can read and append if the file exists and has some data stored in it.
+
+Syntax:
+
+File_object = open(r"File_Name", "Access_Mode")
+
+
+Note: The file should exist in the same directory as the Python script, otherwise full address of the file should be written.
+
+
+
+Example #1: Suppose the text file looked like this We want to read the content of the file using Python.
+
+# Python program to demonstrate
+# opening a file
+
+
+# Open function to open the file "myfile.txt"
+# (same directory) in read mode and store
+# it's reference in the variable file1
+
+file1 = open("myfile.txt")
+
+# Reading from file
+print(file1.read())
+
+file1.close()
+
+Output:
+Welcome to GeeksForGeeks!!
+
+
+
+Example #2: Suppose we want to write more data to the above file using Python.
+
+# Python program to demonstrate
+# opening a file
+
+# Open function to open the file "myfile.txt"
+# (same directory) in append mode and store
+# it's reference in the variable file1
+file1 = open("myfile.txt", "a")
+
+# Writing to file
+file1.write("\nWriting to file :)")
+
+# Closing file
+file1.close()
+
+Output:
+
+
+
+
+
+Closing a file in Python
+If you notice, we have not closed any of the files that we operated on in the above examples. Though Python automatically closes a file if the reference object of the file is allocated to another file, it is a standard practice to close an opened file as a closed file reduces the risk of being unwarrantedly modified or read.
+
+Python has a close() method to close a file. The close() method can be called more than once and if any operation is performed on a closed file it raises a ValueError.
+The below code shows a simple use of close() method to close an opened file.
+
+Example 1:
+
+# open the file using open() function
+file = open("sample.txt")
+
+# Reading from file
+print(file.read())
+
+# closing the file
+file.close()
+
+
+
+Now if we try to perform any operation on a closed file like shown below it raises a ValueError:
+
+# open the file using open() function
+file = open("sample.txt")
+
+# Reading from file
+print(file.read())
+
+# closing the file
+file.close()
+
+# Attempt to write in the file
+file.write(" Attempt to write on a closed file !")
+Output:
+
+ValueError: I/O operation on closed file.

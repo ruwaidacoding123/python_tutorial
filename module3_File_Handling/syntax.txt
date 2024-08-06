@@ -1,0 +1,42 @@
+#Syntax in python
+'''
+Error in Python can be of two types i.e. Syntax errors and Exceptions. 
+Errors are the problems in a program due to which 
+the program will stop the execution. On the other hand, exceptions 
+are raised when some internal events occur which changes the normal flow of the program.
+
+'''
+#Difference between Syntax Error and Exceptions
+
+'''
+Syntax Error: As the name suggests this error is caused by
+ the wrong syntax in the code. It leads to the termination of the program.
+'''
+
+'''
+Exceptions: Exceptions are raised when the program is 
+syntactically correct, but the code resulted in an error. 
+This error does not stop the execution of the program, however, 
+it changes the normal flow of the program.
+
+'''
+#Example:
+
+# initialize the amount variable
+marks = 10000
+
+# perform division with 0
+a = marks / 0
+print(a)
+
+# Output:
+# Traceback (most recent call last) :
+# File “/home/f3ad05420ab851d4bd106ffb04229907.py”, line 4, in
+a=marks/0
+# ZeroDivisionError : #division by zero
+
+
+
+
+
+

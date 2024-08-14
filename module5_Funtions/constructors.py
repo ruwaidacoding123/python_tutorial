@@ -4,7 +4,7 @@ class Person:
 
 
     def talk(self):
-        print("talk")
+        print(f"hi, I am {self.name}")
 
 james = Person("James Smith")
 print(james.name)

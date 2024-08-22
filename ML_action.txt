@@ -1,0 +1,27 @@
+#Steps
+
+1. Import Data
+2. Clead Data
+3. Split the Data into Training/Test Steps
+4. Create Model
+5. Train the Model
+6. Make Predictions
+7. Evaluate and Improve
+
+
+#LIBRARIES
+
+1. Numpy
+2. Pandas
+3. MatPltotLib
+4. Scikit-Learn
+
+#Edittors
+-> Jupyter
+
+
+#jupyter shortcuts
+esc for shortcuts hint
+
+dd delete cell
+ 

@@ -1,0 +1,47 @@
+Accessing characters in Python String
+In Python, individual characters of a String can be accessed by 
+using the method of Indexing. Indexing allows negative address references to access characters from the back of the String, 
+e.g. -1 refers to the last character, -2 refers to the second last character, and so on. 
+
+While accessing an index out of the range will cause an IndexError. Only Integers are 
+allowed to be passed as an index, float or other types that will cause a TypeError.
+
+Reversing a Python String
+With Accessing Characters from a string, we can also reverse them. We can Reverse a string by writing [::-1] and the string will be reversed.
+
+
+#Program to reverse a string
+gfg = "geeksforgeeks"
+print(gfg[::-1])
+
+
+String Slicing
+To access a range of characters in the String, the method of slicing is used. Slicing in a String is done by using a Slicing operator (colon). 
+
+Deleting/Updating from a String
+In Python, Updation or deletion of characters from a String is not allowed. 
+This will cause an error because item assignment or item deletion from a String 
+is not supported. Although deletion of the entire String is possible with the use of a 
+built-in del keyword. This is because Strings are immutable, hence elements of a String cannot be changed once it has been assigned. 
+Only new strings can be reassigned to the same name. 
+
+
+#single and douple quates
+Python string functions are very popular. There are two ways to represent 
+strings in python. String is enclosed either with single quotes or double quotes. 
+Both the ways (single or double quotes) are correct depending upon the requirement. 
+Sometimes we have to use quotes (single or double quotes) together in the same string, in such cases, we use single and double quotes alternatively so that they can be distinguished.
+
+Example #1:
+Check below example and analyze the error –
+
+#Gives Error
+print('It's python')
+
+
+Conclusion –
+The choice between both the types (single quotes and double quotes) depends 
+on the programmer’s choice. Generally, double quotes are used for string representation 
+and single quotes are used for regular expressions, dict keys or SQL. Hence both single quote 
+double quotes depict string in python but it’s sometimes our need to use one type over the other.
+
